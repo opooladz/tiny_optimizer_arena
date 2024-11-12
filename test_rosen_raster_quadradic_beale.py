@@ -3,6 +3,11 @@ import torch
 
 import torch_optimizer as optim
 
+# not used but worked before -- adahessian did v well.
+def StochasticRosenbrock(xs):
+    x1, x2 = xs
+    x1 = random.uniform(0, 1) #  u can adjust the style of noise added in
+    return 100.0*(x2 - x1**2)**2 + (1.0 - x1)**2
 
 def rosenbrock(tensor):
     x, y = tensor
